@@ -1,13 +1,96 @@
 {
-  "workflowApiVersion": "1.1",
-  "metaData": {
-    "icon": "icon.png",
-    "category": "message"
-  },
-  "type": "REST",
-  "userInterfaces": {
-    "configInspector": {
-      "size": "medium"
+  "workflowApiVersion" : "1.1",
+  "name": "",
+  "id": null,
+  "key": "REST-1",
+  "type": "RESTDECISION",
+  "arguments": {
+    "execute": {
+      "inArguments": [
+        { "contactKey": "{{Contact.Key}}" },
+        { "First Name": "{{Contact.Attribute.JBCustomActivity.FirstName}}"},
+        { "Last Name": "{{Contact.Attribute.JBCustomActivity.LastName}}"}
+      ],
+      "outArguments": [
+            { "Score": "" }
+      ],
+      "url": "https://sfmc-jb-ca3.free.beeceptor.com/citi",
+            "verb": "POST",
+            "body": "", 
+            "header": "", 
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
     }
-  }
+  }, 
+  "configurationArguments": {
+    "publish": {
+      "url": "https://sfmc-jb-ca3.free.beeceptor.com/citi",
+            "verb": "POST",
+            "body": "", 
+            "useJwt": false      
+    }
+  },
+  "metaData": {
+    "icon": "https://sample-activity.herokuapp.com/icon.png",
+    "category": "flow control",
+    "iconSmall": null,
+    "original_icon": "icon.png",
+    "isConfigured": true
+  },
+  "editable": true,
+  "outcomes": [
+      {
+         "arguments":{
+            "branchResult":"Up"
+         },
+         "metaData" : {
+          "label": "Up"
+         }
+      },
+      {
+         "arguments":{
+            "branchResult":"No Change"
+         },
+         "metaData" : {
+          "label": "No Change"
+         }
+      },
+      {
+         "arguments":{
+            "branchResult":"Down"
+         },
+         "metaData" : {
+          "label": "Down"
+         }
+      }
+  ],
+  "schema": {
+        "arguments": {
+            "execute": {
+                "outArguments": [
+                    {
+                        "Score": {
+                            "dataType": "Text",
+                            "direction": "out",
+                            "access": "visible"
+                        },                      
+                        "branchResult": {
+                            "dataType": "Text",
+                            "direction": "out",
+                            "access": "visible"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+
+  "errors": []
 }
+
+
+
+
+
+
