@@ -12,7 +12,7 @@
         { "Last Name": "{{Contact.Attribute.JBCustomActivity.LastName}}"}
       ],
       "outArguments": [
-            { "Score": "" }
+            { "score": "" }
       ],
       "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc/getscore",
             "verb": "POST",
@@ -42,26 +42,26 @@
   "outcomes": [
       {
          "arguments":{
-            "branchResult":"Up"
+            "branchResult":"High"
          },
          "metaData" : {
-          "label": "Up"
+          "label": "High"
          }
       },
       {
          "arguments":{
-            "branchResult":"No Change"
+            "branchResult":"Medium"
          },
          "metaData" : {
-          "label": "No Change"
+          "label": "Medium"
          }
       },
       {
          "arguments":{
-            "branchResult":"Down"
+            "branchResult":"Low"
          },
          "metaData" : {
-          "label": "Down"
+          "label": "Low"
          }
       }
   ],
