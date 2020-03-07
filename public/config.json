@@ -25,14 +25,14 @@
   }, 
   "configurationArguments": {
     "publish": {
-      "url": "https://sfmc-jb-ca3.free.beeceptor.com/citi",
+      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc/getscore",
             "verb": "POST",
             "body": "", 
             "useJwt": false      
     }
   },
   "metaData": {
-    "icon": "https://sample-activity.herokuapp.com/icon.png",
+    "icon": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc/getscore",
     "category": "flow control",
     "iconSmall": null,
     "original_icon": "icon.png",
