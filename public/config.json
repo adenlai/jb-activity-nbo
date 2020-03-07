@@ -14,7 +14,7 @@
       "outArguments": [
             { "Score": "" }
       ],
-      "url": "https://sfmc-jb-ca3.free.beeceptor.com/citi",
+      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc/getscore",
             "verb": "POST",
             "body": "", 
             "header": "", 
@@ -32,7 +32,7 @@
     }
   },
   "metaData": {
-    "icon": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc/getscore",
+    "icon": "https://sample-activity.herokuapp.com/icon.png",
     "category": "flow control",
     "iconSmall": null,
     "original_icon": "icon.png",
