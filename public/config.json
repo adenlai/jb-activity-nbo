@@ -55,12 +55,12 @@
                             "dataType": "Text",
                             "direction": "out",
                             "access": "visible"
-                        }
+                        },
                         "offer": {
                             "dataType": "Text",
                             "direction": "out",
                             "access": "visible"
-                        }
+                        },
                         "validity": {
                             "dataType": "Text",
                             "direction": "out",
