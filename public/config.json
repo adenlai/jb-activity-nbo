@@ -42,7 +42,7 @@
   "outcomes": [
       {
          "arguments":{
-            "branchResult":"High"
+            "branchResult":"high"
          },
          "metaData" : {
           "label": "High"
