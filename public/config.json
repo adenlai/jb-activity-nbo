@@ -1,8 +1,9 @@
 {
+  "workflowApiVersion" : "1.1",
   "name": "",
   "id": null,
-  "key": "REST1",
-  "type": "rest",
+  "key": "REST-1",
+  "type": "RESTDECISION",
   "arguments": {
     "execute": {
       "inArguments": [
@@ -11,65 +12,85 @@
         { "Last Name": "{{Contact.Attribute.JBCustomActivity.LastName}}"}
       ],
       "outArguments": [
-            {  
-              "nbo": "", 
-              "offer": "", 
-              "validity": ""
-            }
+            { "score": "" }
       ],
-      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc/nbo",
+      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc/getscore",
+            "verb": "POST",
             "body": "", 
             "header": "", 
             "format": "json",
             "useJwt": false,
             "timeout": 10000
     }
-  },
+  }, 
   "configurationArguments": {
     "publish": {
-      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc/nbo",
+      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc/getscore",
             "verb": "POST",
             "body": "", 
             "useJwt": false      
     }
   },
   "metaData": {
-    "icon": "https://dry-lake-43299.herokuapp.com/icon.png",
-    "category": "message",
+    "icon": "https://dry-sierra-56279.herokuapp.com/icon.png",
+    "category": "flow control",
     "iconSmall": null,
     "original_icon": "icon.png",
     "isConfigured": true
   },
   "editable": true,
   "outcomes": [
-    {
-      "next": "WAITBYDURATION-1"
-    }
+      {
+         "arguments":{
+            "branchResult":"High"
+         },
+         "metaData" : {
+          "label": "High"
+         }
+      },
+      {
+         "arguments":{
+            "branchResult":"Medium"
+         },
+         "metaData" : {
+          "label": "Medium"
+         }
+      },
+      {
+         "arguments":{
+            "branchResult":"Low"
+         },
+         "metaData" : {
+          "label": "Low"
+         }
+      }
   ],
   "schema": {
         "arguments": {
             "execute": {
                 "outArguments": [
                     {
-                        "nbo": {
+                        "Score": {
                             "dataType": "Text",
                             "direction": "out",
                             "access": "visible"
-                        },
-                        "offer": {
+                        },                      
+                        "branchResult": {
                             "dataType": "Text",
                             "direction": "out",
                             "access": "visible"
-                        },
-                        "validity": {
-                            "dataType": "Text",
-                            "direction": "out",
-                            "access": "visible"
-                        }                  
+                        }
                     }
                 ]
             }
         }
     },
+
   "errors": []
 }
+
+
+
+
+
+
