@@ -13,7 +13,7 @@
       "outArguments": [
             { "offer": "" }
       ],
-      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc",
+      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc/nbo",
             "body": "", 
             "header": "", 
             "format": "json",
@@ -23,14 +23,14 @@
   },
   "configurationArguments": {
     "publish": {
-      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc",
+      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc/nbo",
             "verb": "POST",
             "body": "", 
             "useJwt": false      
     }
   },
   "metaData": {
-    "icon": "https://sfmc-jb-ca.free.beeceptor.com",
+    "icon": "https://dry-lake-43299.herokuapp.com/icon.png",
     "category": "message",
     "iconSmall": null,
     "original_icon": "icon.png",
