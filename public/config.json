@@ -2,7 +2,7 @@
   "workflowApiVersion" : "1.1",
   "name": "",
   "id": null,
-  "key": "REST-2",
+  "key": "REST-1",
   "type": "rest",
   "arguments": {
     "execute": {
