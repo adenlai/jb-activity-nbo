@@ -1,8 +1,7 @@
 {
-  "workflowApiVersion" : "1.1",
   "name": "",
   "id": null,
-  "key": "REST-1",
+  "key": "REST1",
   "type": "rest",
   "arguments": {
     "execute": {
@@ -12,66 +11,51 @@
         { "Last Name": "{{Contact.Attribute.JBCustomActivity.LastName}}"}
       ],
       "outArguments": [
-            { "nbo": "",
-              "offer": "",
-              "validity": "" }
+            { "offer": "" }
       ],
-      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc/nbo",
-            "verb": "POST",
+      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc",
             "body": "", 
             "header": "", 
             "format": "json",
             "useJwt": false,
             "timeout": 10000
     }
-  }, 
+  },
   "configurationArguments": {
     "publish": {
-      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc/nbo",
+      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc",
             "verb": "POST",
             "body": "", 
             "useJwt": false      
     }
   },
   "metaData": {
-    "icon": "https://dry-lake-43299.herokuapp.com/icon.png",
+    "icon": "https://sfmc-jb-ca.free.beeceptor.com",
     "category": "message",
     "iconSmall": null,
     "original_icon": "icon.png",
     "isConfigured": true
   },
   "editable": true,
+  "outcomes": [
+    {
+      "next": "WAITBYDURATION-1"
+    }
+  ],
   "schema": {
         "arguments": {
             "execute": {
                 "outArguments": [
                     {
-                        "nbo": {
-                            "dataType": "Text",
-                            "direction": "out",
-                            "access": "visible"
-                        },
                         "offer": {
                             "dataType": "Text",
                             "direction": "out",
                             "access": "visible"
-                        },
-                        "validity": {
-                            "dataType": "Text",
-                            "direction": "out",
-                            "access": "visible"
-                        }                                                
+                        }
                     }
                 ]
             }
         }
     },
-
   "errors": []
 }
-
-
-
-
-
-
