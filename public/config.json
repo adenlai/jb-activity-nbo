@@ -11,7 +11,7 @@
         { "Last Name": "{{Contact.Attribute.JBCustomActivity.LastName}}"}
       ],
       "outArguments": [
-            { "status": "", 
+            {  
               "nbo": "", 
               "offer": "", 
               "validity": ""
