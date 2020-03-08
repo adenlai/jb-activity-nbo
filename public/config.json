@@ -1,9 +1,8 @@
 {
-  "workflowApiVersion" : "1.1",
   "name": "",
   "id": null,
-  "key": "REST-1",
-  "type": "RESTDECISION",
+  "key": "REST1",
+  "type": "rest",
   "arguments": {
     "execute": {
       "inArguments": [
@@ -12,20 +11,19 @@
         { "Last Name": "{{Contact.Attribute.JBCustomActivity.LastName}}"}
       ],
       "outArguments": [
-            { "score": "" }
+            { "status": "" }
       ],
-      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc/getscore",
-            "verb": "POST",
+      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc",
             "body": "", 
             "header": "", 
             "format": "json",
             "useJwt": false,
             "timeout": 10000
     }
-  }, 
+  },
   "configurationArguments": {
     "publish": {
-      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc/getscore",
+      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc",
             "verb": "POST",
             "body": "", 
             "useJwt": false      
@@ -33,49 +31,23 @@
   },
   "metaData": {
     "icon": "https://dry-lake-43299.herokuapp.com/icon.png",
-    "category": "flow control",
+    "category": "message",
     "iconSmall": null,
     "original_icon": "icon.png",
     "isConfigured": true
   },
   "editable": true,
   "outcomes": [
-      {
-         "arguments":{
-            "branchResult":"High"
-         },
-         "metaData" : {
-          "label": "High"
-         }
-      },
-      {
-         "arguments":{
-            "branchResult":"Medium"
-         },
-         "metaData" : {
-          "label": "Medium"
-         }
-      },
-      {
-         "arguments":{
-            "branchResult":"Low"
-         },
-         "metaData" : {
-          "label": "Low"
-         }
-      }
+    {
+      "next": "WAITBYDURATION-1"
+    }
   ],
   "schema": {
         "arguments": {
             "execute": {
                 "outArguments": [
                     {
-                        "Score": {
-                            "dataType": "Text",
-                            "direction": "out",
-                            "access": "visible"
-                        },                      
-                        "branchResult": {
+                        "status": {
                             "dataType": "Text",
                             "direction": "out",
                             "access": "visible"
@@ -85,12 +57,5 @@
             }
         }
     },
-
   "errors": []
 }
-
-
-
-
-
-
